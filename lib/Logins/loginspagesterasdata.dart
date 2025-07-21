@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:terasdata_apps/Logins/ButtonTerasData.dart';
+import 'package:terasdata_apps/Logins/buttonterasdata.dart';
+import 'package:get/get.dart';
+import 'package:terasdata_apps/RegistraionMenu/RegistrationCompany/registrationpages.dart';
 
-class loginPagesTerasData extends StatelessWidget {
-  const loginPagesTerasData({super.key});
+class Loginspagesterasdata extends StatelessWidget {
+  const Loginspagesterasdata({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,9 @@ class loginPagesTerasData extends StatelessWidget {
               fit: BoxFit.cover,
               width: double.infinity,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             // Teks Versi
-            Text(
+            const Text(
               "Version 1.0.0",
               style: TextStyle(
                 color: Colors.black26,
@@ -29,22 +31,22 @@ class loginPagesTerasData extends StatelessWidget {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             // Baris untuk Button
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Flexible(child: buttonTerasData()),
-                SizedBox(width: 10),
+                const Flexible(child: Buttonterasdata()),
+                const SizedBox(width: 10),
                 FloatingActionButton(
                   onPressed: () {
-
+                    Get.offAll(() => const Registrationpages());
                   },
-                  child: Icon(
+                  backgroundColor: Colors.lightBlue,
+                  child: const Icon(
                     Icons.add_outlined,
                     color: Colors.white,
                   ),
-                  backgroundColor: Colors.lightGreen,
                 ),
               ],
             ),

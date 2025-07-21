@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class formTerasData extends StatefulWidget {
-  const formTerasData({super.key});
+class Formterasdata extends StatefulWidget {
+  const Formterasdata({super.key});
 
   @override
-  State<formTerasData> createState() => _formTerasDataState();
+  State<Formterasdata> createState() => _FormterasdataState();
 }
 
-class _formTerasDataState extends State<formTerasData> {
+class _FormterasdataState extends State<Formterasdata> {
 
   bool passHadding = true;
 
@@ -21,8 +21,8 @@ class _formTerasDataState extends State<formTerasData> {
             child: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Colors.black87
@@ -30,7 +30,7 @@ class _formTerasDataState extends State<formTerasData> {
                     )
                   ),
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "User Names",
                       hintText: "Pleace Insert your User Names",
                       hintStyle: TextStyle(
@@ -50,8 +50,8 @@ class _formTerasDataState extends State<formTerasData> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
                               color: Colors.black87
@@ -65,11 +65,11 @@ class _formTerasDataState extends State<formTerasData> {
                     decoration: InputDecoration(
                         labelText: "Password",
                         hintText: "Pleace Insert your Password",
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                             color: Colors.black26
                         ),
                         border: InputBorder.none,
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                             Icons.lock
                         ),
                       suffixIcon: IconButton(

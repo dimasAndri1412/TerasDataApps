@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:terasdata_apps/Logins/FormTerasData.dart';
+import 'package:terasdata_apps/Logins/formterasdata.dart';
 
-class buttonTerasData extends StatefulWidget {
-  const buttonTerasData({super.key});
+class Buttonterasdata extends StatefulWidget {
+  const Buttonterasdata({super.key});
 
   @override
-  State<buttonTerasData> createState() => _buttonTerasDataState();
+  State<Buttonterasdata> createState() => _ButtonTerasDataState();
 }
 
-class _buttonTerasDataState extends State<buttonTerasData> {
+class _ButtonTerasDataState extends State<Buttonterasdata> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,12 +22,12 @@ class _buttonTerasDataState extends State<buttonTerasData> {
           child: Container(
             height: 50,
             width: 300,
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: Colors.lightGreen,
+              color: Colors.lightBlue,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Center(
+            child: const Center(
               child: Text(
                 "Login",
                 style: TextStyle(
@@ -43,7 +43,6 @@ class _buttonTerasDataState extends State<buttonTerasData> {
     );
   }
 
-  // Fungsi untuk memunculkan bottom sheet
   void showBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -57,7 +56,7 @@ class _buttonTerasDataState extends State<buttonTerasData> {
           constraints: BoxConstraints(
             maxHeight: availableHeight,
           ),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
@@ -78,22 +77,22 @@ class _buttonTerasDataState extends State<buttonTerasData> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(width: 48),
+                      const SizedBox(width: 48),
                       IconButton(
                         onPressed: () {
                           Navigator.pop(context); // Tutup bottom sheet
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.close,
                           color: Colors.black87,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                       height: 10
                   ),
-                  Text(
+                  const Text(
                     'LOGIN FORM',
                     style: TextStyle(
                       color: Colors.black87,
@@ -101,11 +100,11 @@ class _buttonTerasDataState extends State<buttonTerasData> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   // Form login
-                  formTerasData(),
+                  const Formterasdata(),
                 ],
               ),
             ),
